@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Flash Drive XT",
+    "image": "https://iili.io/JZu4vUv.jpg",
+    "price": 55000,
+    "short_description": "A sleek sports car with cutting-edge technology.",
+    "big_description": "The Flash Drive XT is a marvel of modern engineering, boasting a turbocharged V8 engine that delivers 600 horsepower. Its aerodynamic design ensures optimal performance, while the interior offers luxurious comfort with state-of-the-art infotainment systems. Perfect for those who crave speed and elegance."
+  },
+  {
+    "name": "EcoCruise 200",
+    "image": "https://iili.io/JZu4k0J.jpg",
+    "price": 30000,
+    "short_description": "An eco-friendly hybrid vehicle.",
+    "big_description": "The EcoCruise 200 is designed for the environmentally conscious driver. Combining electric and gasoline power, it provides an impressive fuel economy of 60 mpg. The car's design focuses on sustainability without compromising on style or performance. Inside, you'll find advanced safety features and a spacious, comfortable cabin."
+  },
+  {
+    "name": "Urban Rover",
+    "image": "https://iili.io/JZu40Kb.webp",
+    "price": 45000,
+    "short_description": "A versatile SUV for city and off-road adventures.",
+    "big_description": "The Urban Rover is built to handle any terrain. Its robust 4x4 drivetrain and high ground clearance make it ideal for both city streets and rugged trails. The interior is equipped with the latest tech, including a panoramic sunroof, premium sound system, and adaptive cruise control."
+  },
+
+  {
+    "name": "Speedster X1",
+    "image": "https://iili.io/JZu41lj.jpg",
+    "price": 70000,
+    "short_description": "A high-performance sports car with stunning looks.",
+    "big_description": "The Speedster X1 is a dream come true for speed enthusiasts. With a 700 horsepower engine and advanced aerodynamics, it offers unparalleled acceleration and handling. The exterior design is aggressive and sleek, while the interior is tailored for comfort and control, featuring racing seats and a digital dashboard."
+  },
+  {
+    "name": "Family Van Pro",
+    "image": "https://iili.io/JZu4ciu.jpg",
+    "price": 35000,
+    "short_description": "A spacious and reliable minivan for the whole family.",
+    "big_description": "The Family Van Pro is perfect for large families or those who need extra space. It comes with three rows of seating, offering ample legroom and storage. Safety is a priority with features like blind-spot monitoring, lane-keeping assist, and a rearview camera. The van also includes a built-in entertainment system to keep everyone entertained on long trips."
+  },
+  {
+    "name": "Luxe Sedan 5000",
+    "image": "https://iili.io/JZu4EUx.jpg",
+    "price": 60000,
+    "short_description": "A premium sedan that exudes luxury and sophistication.",
+    "big_description": "The Luxe Sedan 5000 is designed for those who appreciate the finer things in life. It features a powerful yet smooth engine, delivering a quiet and comfortable ride. The interior is adorned with high-quality materials, including leather seats and wood trim. Advanced tech features such as a heads-up display and a premium audio system ensure a first-class driving experience."
+  },
+  {
+    "name": "Adventure Trek",
+    "image": "https://iili.io/JZu4VRV.jpg",
+    "price": 40000,
+    "short_description": "A rugged SUV built for outdoor exploration.",
+    "big_description": "The Adventure Trek is the ultimate companion for outdoor enthusiasts. Its durable build and powerful engine make it capable of tackling the toughest trails. The vehicle is equipped with all-wheel drive, off-road tires, and skid plates for added protection. Inside, you'll find a versatile cargo space, perfect for all your gear, and an infotainment system to keep you connected."
+  },
+  {
+    "name": "Compact Comet",
+    "image": "https://iili.io/JZu4MHQ.jpg",
+    "price": 25000,
+    "short_description": "A stylish and efficient compact car.",
+    "big_description": "The Compact Comet is perfect for city driving, offering excellent fuel efficiency and easy maneuverability. Its modern design includes a sleek exterior and a comfortable, tech-savvy interior. The car comes with a range of safety features, including automatic emergency braking and a rearview camera, making it an ideal choice for urban dwellers."
+  },
+  {
+    "name": "PowerTruck 2500",
+    "image": "https://iili.io/JZu4Nig.jpg",
+    "price": 50000,
+    "short_description": "A powerful and durable pickup truck.",
+    "big_description": "The PowerTruck 2500 is built to handle the toughest jobs. With a high-torque diesel engine, it offers incredible towing capacity and payload capabilities. The truck's rugged exterior is matched by a comfortable and feature-rich interior, including heated seats, a large touchscreen display, and advanced driver assistance systems."
+  },
+  {
+    "name": "Sporty Coupe Z",
+    "image": "https://iili.io/JZu4WOB.jpg",
+    "price": 65000,
+    "short_description": "A dynamic and stylish coupe.",
+    "big_description": "The Sporty Coupe Z combines performance and elegance in a compact package. Its turbocharged engine delivers exhilarating acceleration, while the finely-tuned suspension ensures precise handling. The interior is both luxurious and functional, featuring sport seats, a premium sound system, and the latest in-car technology."
+  },
+
+  {
+    "name": "Electric Glide S",
+    "image": "https://iili.io/JZu4jx1.jpg",
+    "price": 45000,
+    "short_description": "A cutting-edge electric sedan.",
+    "big_description": "The Electric Glide S represents the future of driving with its all-electric powertrain. Offering a range of 300 miles on a single charge, it is both efficient and eco-friendly. The sleek design is complemented by a high-tech interior, including a large infotainment screen, wireless charging, and advanced driver assistance features."
+  },
+
+  {
+    "name": "Luxury SUV LX",
+    "image": "https://iili.io/JZu4efa.jpg",
+    "price": 80000,
+    "short_description": "A premium SUV with unmatched comfort and technology.",
+    "big_description": "The Luxury SUV LX is the pinnacle of sophistication and performance. Its powerful engine and smooth ride make it perfect for any journey. The interior is a haven of luxury, with premium leather seats, a state-of-the-art sound system, and a panoramic sunroof. Advanced safety features and driver assistance technologies ensure peace of mind on every drive."
+  },
+  {
+    "name": "Retro Classic 100",
+    "image": "https://iili.io/JZu4wWF.jpg",
+    "price": 35000,
+    "short_description": "A charming vintage-inspired car.",
+    "big_description": "The Retro Classic 100 combines nostalgic design with modern technology. Its stylish exterior harks back to the golden age of automobiles, while the interior is equipped with contemporary comforts like air conditioning, a touchscreen infotainment system, and Bluetooth connectivity. The car's efficient engine and smooth handling make it a joy to drive."
+  },
+  {
+    "name": "Turbo Hatch GT",
+    "image": "https://iili.io/JZu4XDP.jpg",
+    "price": 28000,
+    "short_description": "A fun and sporty hatchback.",
+    "big_description": "The Turbo Hatch GT is designed for those who love to drive. Its turbocharged engine provides spirited performance, while the compact size makes it perfect for navigating tight city streets. The interior is modern and practical, with foldable rear seats for extra cargo space and a host of tech features including smartphone integration and a premium audio system."
+  },
+  {
+    "name": "Grand Tourer V12",
+    "image": "https://iili.io/JZApcG4.jpg",
+    "price": 100000,
+    "short_description": "A luxurious grand touring car with a powerful V12 engine.",
+    "big_description": "The Grand Tourer V12 is the epitome of luxury and performance. Its V12 engine delivers breathtaking power and a smooth, refined ride. The elegant exterior design is matched by an opulent interior, featuring handcrafted leather seats, a high-end sound system, and advanced navigation and driver assistance technologies. This car is perfect for long journeys in ultimate comfort and style."
+  }
+]
