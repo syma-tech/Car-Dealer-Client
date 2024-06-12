@@ -1,19 +1,36 @@
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const NavBar = () => {
+  const { user, logOut } = useAuth();
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   const navItems = (
     <>
       <li>
-        <Link className="active:text-orange-500" to="/">
-          Home
-        </Link>
+        <Link to="/">Home</Link>
       </li>
 
       <li>
-        <Link className="active:text-orange-500" to="/explore">
-          Explore
-        </Link>
+        <Link to="/explore">Explore</Link>
       </li>
+      {user?.email ? (
+        <>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </>
+      ) : (
+        <></>
+      )}
+      <li>{user?.email && <p>{user?.email}</p>}</li>
     </>
   );
   return (
@@ -43,15 +60,42 @@ const NavBar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost  text-xl">daisyUI</a>
+        <a className="btn btn-ghost  text-xl">Car Dealer</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal active:text-orange-500  px-1">
           {navItems}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end space-x-5">
+        {user?.email ? (
+          <>
+            <Link>
+              <button
+                onClick={handleLogOut}
+                className="btn btn-sm hover:bg-white hover:text-orange-600 border-0 text-white bg-orange-600"
+              >
+                Log Out
+              </button>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link
+              className="btn btn-sm hover:bg-white hover:text-orange-600 border-0 text-white bg-orange-600"
+              to="/login"
+            >
+              Login
+            </Link>
+
+            <Link
+              className="btn btn-sm hover:bg-white hover:text-orange-600 border-0 text-white bg-orange-600 "
+              to="/register"
+            >
+              Register
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

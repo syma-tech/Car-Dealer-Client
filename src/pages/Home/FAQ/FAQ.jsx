@@ -8,7 +8,7 @@ const FAQ = () => {
       </div>
       <div className="space-y-7">
         <div className="collapse collapse-arrow bg-black text-orange-600">
-          <input type="radio" name="my-accordion-2" defaultChecked />
+          <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
             Why get from Car Dealer?
           </div>

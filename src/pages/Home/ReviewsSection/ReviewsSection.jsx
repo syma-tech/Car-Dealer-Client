@@ -2,24 +2,45 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+// import rating from react rating
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
 
 // import required modules
 import { Navigation } from "swiper/modules";
+import { useEffect, useState } from "react";
 
 const ReviewsSection = () => {
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    fetch("/reviews.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setReviews(data);
+      });
+  }, []);
+
   return (
     <section>
-      <h2 className="text-3xl font-bold text-center py-20">Popular Brands</h2>
+      <h2 className="text-3xl font-bold text-center pt-32">
+        Customers Reviews
+      </h2>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {reviews.map((review) => (
+          <SwiperSlide key={review._id}>
+            <div className="mx-32 my-16 flex flex-col items-center">
+              <Rating
+                style={{ maxWidth: 180 }}
+                value={review.rating}
+                readOnly
+              />
+              <p className="py-8">{review.details}</p>
+              <h2 className="text-2xl text-orange-600">{review.name}</h2>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
