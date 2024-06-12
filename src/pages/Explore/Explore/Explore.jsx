@@ -12,9 +12,7 @@ const Explore = () => {
   return (
     <>
       <div>
-        <TitleHeading
-          heading={`${cars.length} vehicles for sale in Bangladesh`}
-        />
+        <TitleHeading heading={`${cars.length} vehicles for sale`} />
         <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-6 pb-32">
           {cars.map((car) => (
             <CarCard key={car._id} car={car} />

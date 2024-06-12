@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const CarCard = ({ car }) => {
-  const { _id, name, image, price, short_description, big_description } = car;
+  const { _id, name, image, price, short_description } = car;
   return (
     <div className="card card-compact w-96 bg-black text-white shadow-xl drop-shadow-xl my-5">
       <figure>

@@ -24,7 +24,8 @@ export const router = createBrowserRouter([
         path: "/explore",
         element: <Explore />,
         // loader: () => fetch("https://car-dealer-server-three.vercel.app/cars"),
-        loader: () => fetch("http://localhost:5000/cars"),
+        // loader: () => fetch("http://localhost:5000/cars"),
+        loader: () => fetch("https://car-dealer-server-three.vercel.app/cars"),
       },
       {
         path: "/purchase/:id",
