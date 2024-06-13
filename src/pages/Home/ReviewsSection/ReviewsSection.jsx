@@ -10,16 +10,17 @@ import "@smastrom/react-rating/style.css";
 // import required modules
 import { Navigation } from "swiper/modules";
 import { useEffect, useState } from "react";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const ReviewsSection = () => {
   const [reviews, setReviews] = useState([]);
+  const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    fetch("/reviews.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setReviews(data);
-      });
+    axiosPublic.get("/reviews").then((res) => {
+      console.log(res.data);
+      setReviews(res.data);
+    });
   }, []);
 
   return (
@@ -37,7 +38,9 @@ const ReviewsSection = () => {
                 readOnly
               />
               <p className="py-8">{review.details}</p>
-              <h2 className="text-2xl text-orange-600">{review.name}</h2>
+              <h2 className="text-2xl text-orange-600">
+                {review.customerName}
+              </h2>
             </div>
           </SwiperSlide>
         ))}

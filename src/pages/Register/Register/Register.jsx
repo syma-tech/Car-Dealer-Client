@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const Register = () => {
   const { signUp, userUpdateProfile } = useAuth();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -17,6 +19,14 @@ const Register = () => {
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
+        const userInfo = {
+          name: result.user.displayName,
+          email: result.user.email,
+        };
+        axiosPublic.post("/users", userInfo).then((res) => {
+          console.log(res.data);
+        });
+
         navigate("/");
 
         userUpdateProfile(name, photo)
@@ -90,11 +100,6 @@ const Register = () => {
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-orange-600">Register</button>

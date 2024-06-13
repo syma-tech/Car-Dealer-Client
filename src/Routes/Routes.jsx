@@ -10,6 +10,8 @@ import { axiosSecure } from "../hooks/useAxiosSecure";
 import Dashboard from "../Layouts/Dashboard";
 import Pay from "../pages/Dashboard/Pay/Pay";
 import MyOrders from "../pages/Dashboard/MyOrders/MyOrders";
+import CustomerReviews from "../pages/Dashboard/CustomerReviews/CustomerReviews";
+import MakeAdmin from "../pages/Dashboard/MakeAdmin/MakeAdmin";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +52,7 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
     children: [
+      // users routes
       {
         path: "/dashboard/pay",
         element: <Pay />,
@@ -57,6 +60,16 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/myOrders",
         element: <MyOrders />,
+      },
+      {
+        path: "/dashboard/reviews",
+        element: <CustomerReviews />,
+      },
+
+      // admin routes
+      {
+        path: "/dashboard/makeAdmin",
+        element: <MakeAdmin />,
       },
     ],
   },
