@@ -14,14 +14,14 @@ const Register = () => {
     const password = form.password?.value;
     const photo = form.photo?.value;
     const name = form.name?.value;
-    console.log(email, password, name, photo);
+    // console.log(email, password, name, photo);
 
     signUp(email, password)
       .then((result) => {
-        console.log(result.user);
+        console.log(result.user?.email, result.user?.displayName);
         const userInfo = {
-          name: result.user.displayName,
-          email: result.user.email,
+          name,
+          email: result.user?.email,
         };
         axiosPublic.post("/users", userInfo).then((res) => {
           console.log(res.data);

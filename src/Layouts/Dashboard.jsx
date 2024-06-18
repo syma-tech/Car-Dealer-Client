@@ -1,7 +1,33 @@
 import { NavLink, Outlet } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import useAxiosSecure from "../hooks/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
 
 const Dashboard = () => {
-  const isAdmin = true;
+  const { user, logOut } = useAuth();
+  const axiosSecure = useAxiosSecure();
+
+  const { data: existingUsers = [], refetch } = useQuery({
+    queryKey: ["users"],
+    queryFn: async () => {
+      await axiosSecure.get("/users");
+    },
+  });
+
+  const currentUser = existingUsers?.find((exU) => exU?.email == user?.email);
+
+  const isAdmin = currentUser?.role === "admin" ? true : false;
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        refetch();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  // const isAdmin = true;
   return (
     <div className="flex">
       {/* Dashboard sidebar */}
@@ -41,7 +67,11 @@ const Dashboard = () => {
           )}
 
           <li>
-            <NavLink to="/">Log Out</NavLink>
+            <NavLink to="/">
+              <button onClick={handleLogOut} className="">
+                Log Out
+              </button>
+            </NavLink>
           </li>
         </ul>
       </div>
