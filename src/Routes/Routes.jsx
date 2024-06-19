@@ -12,6 +12,8 @@ import Pay from "../pages/Dashboard/Pay/Pay";
 import MyOrders from "../pages/Dashboard/MyOrders/MyOrders";
 import CustomerReviews from "../pages/Dashboard/CustomerReviews/CustomerReviews";
 import MakeAdmin from "../pages/Dashboard/MakeAdmin/MakeAdmin";
+import AdminRoute from "./AdminRoute";
+import AddProduct from "../pages/Dashboard/AddProduct/AddProduct";
 
 export const router = createBrowserRouter([
   {
@@ -56,7 +58,7 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
-      // users routes
+      // normal users routes
       {
         path: "/dashboard/pay",
         element: <Pay />,
@@ -70,10 +72,22 @@ export const router = createBrowserRouter([
         element: <CustomerReviews />,
       },
 
-      // admin routes
+      // admin only routes
+      {
+        path: "/dashboard/addAProduct",
+        element: (
+          <AdminRoute>
+            <AddProduct />
+          </AdminRoute>
+        ),
+      },
       {
         path: "/dashboard/makeAdmin",
-        element: <MakeAdmin />,
+        element: (
+          <AdminRoute>
+            <MakeAdmin />
+          </AdminRoute>
+        ),
       },
     ],
   },

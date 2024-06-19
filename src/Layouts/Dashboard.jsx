@@ -1,33 +1,24 @@
 import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import useAxiosSecure from "../hooks/useAxiosSecure";
-import { useQuery } from "@tanstack/react-query";
+// import useAxiosSecure from "../hooks/useAxiosSecure";
+// import { useQuery } from "@tanstack/react-query";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
-  const { user, logOut } = useAuth();
-  const axiosSecure = useAxiosSecure();
-
-  const { data: existingUsers = [], refetch } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      await axiosSecure.get("/users");
-    },
-  });
-
-  const currentUser = existingUsers?.find((exU) => exU?.email == user?.email);
-
-  const isAdmin = currentUser?.role === "admin" ? true : false;
+  const { logOut } = useAuth();
+  const [isAdmin] = useAdmin();
+  console.log(isAdmin);
 
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        refetch();
+        // refetch();
       })
       .catch((error) => {
         console.error(error);
       });
   };
-  // const isAdmin = true;
+
   return (
     <div className="flex">
       {/* Dashboard sidebar */}
