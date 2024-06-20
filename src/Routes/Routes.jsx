@@ -14,6 +14,8 @@ import CustomerReviews from "../pages/Dashboard/CustomerReviews/CustomerReviews"
 import MakeAdmin from "../pages/Dashboard/MakeAdmin/MakeAdmin";
 import AdminRoute from "./AdminRoute";
 import AddProduct from "../pages/Dashboard/AddProduct/AddProduct";
+import ManageProducts from "../pages/Dashboard/ManageProducts/ManageProducts";
+import ManageAllOrders from "../pages/Dashboard/ManageAllOrders/ManageAllOrders";
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +76,14 @@ export const router = createBrowserRouter([
 
       // admin only routes
       {
+        path: "/dashboard/manageAllOrders",
+        element: (
+          <AdminRoute>
+            <ManageAllOrders />
+          </AdminRoute>
+        ),
+      },
+      {
         path: "/dashboard/addAProduct",
         element: (
           <AdminRoute>
@@ -86,6 +96,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <MakeAdmin />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/manageProducts",
+        element: (
+          <AdminRoute>
+            <ManageProducts />
           </AdminRoute>
         ),
       },

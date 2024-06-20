@@ -7,23 +7,24 @@ const AddProduct = () => {
   const handleAddProduct = (e) => {
     e.preventDefault();
     const form = e.target;
-    const carName = form.carName.value;
-    const price = form.price.value;
-    const shortDescription = form.shortDescription.value;
-    const bigDescription = form.bigDescription.value;
-    const image = form.photo.value;
+    const carName = form?.carName?.value;
+    const price = form?.price?.value;
+    const short_description = form?.short_description?.value;
+    const big_description = form?.big_description?.value;
+    const image = form.photo?.value;
 
     const productInfo = {
       name: carName,
-      price,
-      shortDescription,
-      bigDescription,
       image,
+      price,
+      short_description,
+      big_description,
     };
     console.log(productInfo);
     axiosSecure.post("/cars", productInfo).then((res) => {
       console.log(res.data);
       if (res.data.insertedCount > 0) {
+        alert(`${carName} has been added`);
         Swal.fire({
           position: "top-end",
           icon: "success",
@@ -35,9 +36,11 @@ const AddProduct = () => {
     });
   };
   return (
-    <div>
-      <h2>Add your product here</h2>
-      <div className="hero min-h-screen bg-black">
+    <div className="bg-black">
+      <h2 className="text-3xl font-semibold text-center text-lime-400 pt-16">
+        Add your product here
+      </h2>
+      <div className="hero min-h-screen ">
         <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-2xl">
           <div className="card shrink-0 w-full shadow-lime-500 shadow-2xl bg-black">
             <form onSubmit={handleAddProduct} className="card-body ">
@@ -78,7 +81,7 @@ const AddProduct = () => {
                   <textarea
                     className="textarea textarea-bordered h-16"
                     placeholder="Car Short Description"
-                    name="shortDescription"
+                    name="short_description"
                     required
                   ></textarea>
                 </div>
@@ -93,7 +96,7 @@ const AddProduct = () => {
                   <textarea
                     className="textarea textarea-bordered h-24"
                     placeholder="Car Description"
-                    name="bigDescription"
+                    name="big_description"
                     required
                   ></textarea>
                 </div>
