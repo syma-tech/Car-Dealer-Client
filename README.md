@@ -1,8 +1,24 @@
-# React + Vite
+# 🔗 [Car Dealer Client](https://car-dealer-client.web.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Link: https://car-dealer-client.web.app/
 
-Currently, two official plugins are available:
+## 🚀 About My Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'm a junior developer. This is my websites client side code. Its deployed on firebase. Created by using TailwindCSS, React, React router dom. Firebase Authentication , .env.local , daisyUI, etc.
+
+## You can use this project and can
+
+- Admin can Add product (car)
+- Admin can Remove product (car)
+- Register and Login
+- Admin and user different views
+- Admin can make any User as Admin
+- Admin can see all users orders
+- User can see and delete only his/her own orders
+- Give feedback as Review
+
+## Tech Stack
+
+**Client:** React, Firebase, Axios, Tanstack Query, TailwindCSS
+
+**Server:** Node, Express, MongoDb, Dotenv
