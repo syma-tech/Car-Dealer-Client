@@ -7,8 +7,8 @@ const useAllOrders = () => {
   const { data: totalOrders = [], refetch } = useQuery({
     queryKey: [`orders`],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/orders`);
-      console.log(res.data);
+      const res = await axiosSecure.get("/orders");
+      console.log(res);
       return res.data;
     },
   });

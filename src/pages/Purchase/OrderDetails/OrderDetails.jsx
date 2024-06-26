@@ -24,15 +24,15 @@ const OrderDetails = ({ _id, image, name, short_description, price }) => {
     };
 
     axiosSecure.post("/orders", orderInfo).then((res) => {
-      console.log(res.data);
-      if (res.data.insertedCount) {
+      if (res.data.insertedId) {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Your order has been placed",
+          title: `${user?.displayName}!!! your order has been placed`,
           showConfirmButton: false,
           timer: 1500,
         });
+        console.log(res.data);
       }
     });
   };

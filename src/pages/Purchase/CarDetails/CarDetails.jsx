@@ -1,4 +1,3 @@
-import React from "react";
 import Features from "../Features/Features";
 import { Link } from "react-router-dom";
 
